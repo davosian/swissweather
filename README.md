@@ -26,7 +26,8 @@ async def main():
     print(json.dumps(response, indent=2))
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## Usage Details
