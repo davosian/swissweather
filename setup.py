@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="swissweather",
-    version="0.2.0",
+    version="0.2.1",
     author="Dennis Staiger",
     author_email="dnsstaiger@gmx.net",
     description="SRF Meteo weather forecast in Switzerland",
@@ -23,6 +23,7 @@ setuptools.setup(
           'oauthlib',
           'requests_oauthlib',
           'aiohttp',
+          'dotenv'
       ],
     python_requires='>=3.8',
 )
