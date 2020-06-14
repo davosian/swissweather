@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="swissweather",
-    version="0.2.3",
+    version="0.2.4",
     author="Dennis Staiger",
     author_email="dnsstaiger@gmx.net",
     description="SRF Meteo weather forecast in Switzerland",

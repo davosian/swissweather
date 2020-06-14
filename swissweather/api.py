@@ -1,8 +1,6 @@
 from typing import Final
 import json
 
-
-from dotenv import load_dotenv
 import asyncio
 import aiohttp
 
