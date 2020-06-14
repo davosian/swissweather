@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="swissweather-davosian",
-    version="0.0.1",
+    name="swissweather",
+    version="0.1.0",
     author="Dennis Staiger",
     author_email="dnsstaiger@gmx.net",
     description="SRF Meteo weather forecast in Switzerland",
