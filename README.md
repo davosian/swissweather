@@ -2,7 +2,34 @@
 
 This is a library to consume the SRF Meteo weather API published by Switzerland's public broadcasting cooperation, SRG SSR. You can find the API documentation [on their website](https://developer.srgssr.ch/apis/srgssr-weather).
 
-## Usage
+## Example Usage
+
+The following code snippet shows how to use the library to get the current weather for a specific location in Switzerland (Berne).
+
+```python
+from typing import Final
+from datetime import datetime
+import json
+
+from swissweather.api import getCurrentForecast
+import asyncio
+
+async def main():
+
+    CLIENT_ID: Final = 'MY_CLIENT_ID' # get your account at https://developer.srgssr.ch/apis/srgssr-weather
+    CLIENT_SECRET: Final = 'MY_CLIENT_SECRET'
+
+    LATITUDE: Final = "46.94843" # Berne downtown
+    LONGITUDE: Final = "7.44323" # Berne downtown
+
+    response = await getCurrentForecast(CLIENT_ID, CLIENT_SECRET, LATITUDE, LONGITUDE)
+    print(json.dumps(response, indent=2))
+
+
+asyncio.run(main())
+```
+
+## Usage Details
 
 First, you must [apply for a developer token and agree to their terms](https://developer.srgssr.ch/apis/srgssr-weather). As of this writing (June 2020), this is free for non-commercial use. After being accepted, you will get a `client_id` and `client_secret` you can use to interact with the service using this Python library.
 
@@ -10,7 +37,7 @@ All endpoints require the following parameters to be passed along:
 
 `client_id`: the username you received from registering as developer from the link above
 
-`client_password`: the matching password you received from registering as developer from the link above
+`client_secret`: the matching password you received from registering as developer from the link above
 
 `latitude`: the first part of the coordinates from the location in Switzerland you want to know the forecast in `WGS 84` notation.
 
