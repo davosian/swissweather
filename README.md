@@ -2,6 +2,8 @@
 
 This is a library to consume the SRF Meteo weather API published by Switzerland's public broadcasting cooperation, SRG SSR. You can find the API documentation [on their website](https://developer.srgssr.ch/apis/srgssr-weather).
 
+**Important notice: SRF Meteo has revamped their API and therefore the current project is not working anymore. Since free access has now been severely restricted (6 calls per day for one location only), I am considering to scrap this project entirely. Its original purpose was for integrating with SmartHome solutions and now weather information is limited to a few updates a day.**
+
 ## Example Usage
 
 The following code snippet shows how to use the library to get the current weather for a specific location in Switzerland (Berne).
